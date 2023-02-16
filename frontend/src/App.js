@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Login } from './Login';
 import { Register } from "./Register";
+import {SimpleReflexAgent} from "./SimpleReflexAgent"
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login')
@@ -14,8 +15,10 @@ function App() {
   return (
     <div className="App">
       {
-        currentForm === 'login' ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>
+        //UNCOMENT TO SEE LOGIN AND REGISTER FEATURE
+        //currentForm === 'login' ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>
       }
+      <SimpleReflexAgent />
 
     </div>
   );
