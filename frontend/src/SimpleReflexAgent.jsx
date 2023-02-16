@@ -1,20 +1,34 @@
-function Profile() {
-    return (
-      <img
-        src="https://i.imgur.com/MK3eW3As.jpg"
-        alt="Katherine Johnson"
-      />
-    );
-  }
+import React, { useRef, useEffect } from "react";
+import { Application } from "pixi.js";
+
+import * as PIXI from 'pixi.js'
+
+const app = new PIXI.Application({
+    width: 800,
+    height: 600,
+    backgroundColor: 'black',
+  });
+
+export function SimpleReflexAgent() {
+  const ref = useRef(null);
+  const gr  = new PIXI.Graphics();
+  gr.beginFill(0xffffff);
+  gr.drawCircle(30, 30, 30);
+  gr.endFill();
+  app.stage.addChild(gr)
   
-  export function SimpleReflexAgent() {
-    return (
-      <section>
-        <h1>Amazing scientists</h1>
-        <Profile />
-        <Profile />
-        <Profile />
-      </section>
-    );
-  }
-  
+
+  useEffect(() => {
+    // On first render add app to DOM
+    ref.current.appendChild(app.view);
+    // Start the PixiJS app
+    app.start();
+
+    return () => {
+      // On unload stop the application
+      app.stop();
+    };
+  }, []);
+ 
+  return <div ref={ref} />;
+}
