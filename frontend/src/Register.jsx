@@ -8,6 +8,7 @@ export const Register = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(email);
+        //props.onFormSwitch('page')
     }
 
     return (
@@ -20,7 +21,7 @@ export const Register = (props) => {
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@email.com" id="email" name="email" />
                 <label htmlFor="password">password</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)}type="password" placeholder="********" id="password" name="password" />
-                <button type="submit">Log in</button>
+                <button type="submit" >Log in</button>
             </form>
             <button  className="link-btn" onClick={()=> props.onFormSwitch('login')}>Already have an account? Login here.</button>
         </div>

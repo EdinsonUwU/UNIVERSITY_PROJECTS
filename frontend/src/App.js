@@ -16,9 +16,12 @@ function App() {
     <div className="App">
       {
         //UNCOMENT TO SEE LOGIN AND REGISTER FEATURE
+        currentForm === 'login' ? <Login onFormSwitch={toggleForm}/> : currentForm === 'page' ? <SimpleReflexAgent /> : <Register onFormSwitch={toggleForm}/>
         //currentForm === 'login' ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>
       }
-      <SimpleReflexAgent />
+      {
+        //<SimpleReflexAgent />
+      }
 
     </div>
   );
