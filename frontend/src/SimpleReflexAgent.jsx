@@ -1,6 +1,4 @@
 import React, { useRef, useEffect } from "react";
-import { Application } from "pixi.js";
-
 import * as PIXI from 'pixi.js'
 
 const app = new PIXI.Application({
