@@ -8,6 +8,8 @@ UNIVERSITY PROJECTS
 
 ## General info
 Welcome, in this repository is the code of a fullstak web-aplication. When deployed, you can use it to show your friends and reclutators what you are able to do, based on the projects you have loaded! Both video, compiler, and code can be set up to waste no time, isn't great?
+### Database model
+Here you are: https://lucid.app/lucidchart/92626374-20bb-48d0-9871-b99ccd219b79/edit?invitationId=inv_653f1c0d-44ec-42b3-871e-d591bb11f4ee&page=9X2EZdOqSHeG#
 	
 ## Setup
 To run this project, just clone this repositori, and on fronted folder, open a terminal and type:
